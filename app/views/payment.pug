@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  .container
+    .card
+      form.row(method='POST' action='/confirm')
+        .col-md-4
+          .card-body
+            .card-title
+              h3.text-center Payment
+            hr
+            
+            .form-group
+              label.control-label.mb-1(for='cc-name') Name on card
+              input#cc-name.form-control.cc-name(name='cc-name' type='text' required)
+            .form-group
+              label.control-label.mb-1(for='cc-number') Card number
+              input#cc-number.form-control.cc-number.identified.visa(name='cc-number' type='tel' required pattern='[0-9]{16}')
+            .row
+              .col-6
+                label.control-label.mb-1(for='cc-exp') Expiration
+                .input-group
+                  input#cc-exp.form-control(name='cc-month' type='tel' required placeholder='MM')
+                  input.form-control(name='cc-year' type='tel' required placeholder='YY')
+              .col-6
+                label.control-label.mb-1(for='cc-cvv') Security code
+                input#cc-cvv.form-control.cc-cvc(name='cc-cvv' type='tel' required placeholder='CVV')
+
+        .col-md-8
+          .card-body
+            .card-title
+              h3 Personal info
+            hr
+            .form-row
+              .form-group.col-md-6
+                label.mb-1(for='first-name') First name
+                input#first-name.form-control(name='first-name' type='text' required='')
+              .form-group.col-md-6
+                label.mb-1(for='last-name') Last name
+                input#last-name.form-control(name='last-name' type='text' required='')
+            .form-group
+              label.mb-1(for='address') Address
+              input#address.form-control(name='address' type='text' required='')
+            .form-row
+              .form-group.col-md-6
+                label.mb-1(for='city') City
+                input#city.form-control(name='city' type='text' required='')
+              .form-group.col-md-4
+                label.mb-1(for='state') State
+                input#state.form-control(name='state' type='text' required='')
+              .form-group.col-md-2
+                label.mb-1(for='zip') Zip
+                input#zip.form-control(name='zip' type='text' required='')
+        
+        .col-md-4.offset-md-4
+          .card-body
+            input(type='hidden' name='homeaway_id' value=homeaway_id)
+            button.btn.btn-lg.btn-info.btn-block(type='submit')
+              i.fa.fa-lock.fa-lg
+              span   Send
