@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  .container
+    for booking in bookings
+      .card
+        .row
+          .col-md-4
+            .card-body
+              .form-group
+                label.control-label.mb-1(for='cc-name') Name on card
+                input#cc-name.form-control(type='text' value=booking.cc_name disabled)
+              .form-group
+                label.control-label.mb-1(for='cc-number') Card number
+                input#cc-number.form-control(type='text' value=booking.cc_number disabled)
+              .row
+                .col-6
+                  .form-group
+                    label.control-label.mb-1(for='cc-exp') Expiration
+                    input#cc-exp.form-control(type='text' value=booking.cc_exp disabled)
+                .col-6
+                  label.control-label.mb-1(for='cc-cvv') Security code
+                  input#cc-cvv.form-control(type='text' value=booking.cc_cvv disabled)
+
+          .col-md-8
+            .card-body
+              .form-row
+                .form-group.col-md-6
+                  label.mb-1(for='first-name') First name
+                  input#first-name.form-control(type='text' value=booking.first_name disabled)
+                .form-group.col-md-6
+                  label.mb-1(for='last-name') Last name
+                  input#last-name.form-control(type='text' value=booking.last_name disabled)
+              .form-group
+                label.mb-1(for='address') Address
+                input#address.form-control(type='text' value=booking.address disabled)
+              .form-row
+                .form-group.col-md-6
+                  label.mb-1(for='city') City
+                  input#city.form-control(type='text' value=booking.city disabled)
+                .form-group.col-md-4
+                  label.mb-1(for='state') State
+                  input#state.form-control(type='text' value=booking.state disabled)
+                .form-group.col-md-2
+                  label.mb-1(for='zip') Zip
+                  input#zip.form-control(type='text' value=booking.zip disabled)
+
+          if !revealed
+            .col-md-4.offset-md-4
+              .card-body
+                a.btn.btn-lg.btn-danger.btn-block(href='/list/' + booking.id)
+                  i.fa.fa-unlock.fa-lg
+                  span   Reveal
+      br

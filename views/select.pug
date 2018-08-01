@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container
+    .card
+      h5.card-header Select
+      .card-body
+        .row
+          for listing in listings
+            .col-sm-3
+              form.card(method='POST' action='/payment')
+                img.card-img-top(src=listing.thumbnail.secureUri alt='Card image cap')
+                .card-body
+                  p.card-text= listing.headline
+                ul.list-group.list-group-flush
+                  li.list-group-item.small #{listing.location.city}, #{listing.location.state}
+                  li.list-group-item.small= listing.regionPath
+                .card-body
+                  input(type='hidden' name='listing_id' value=listing.listingId)
+                  button.btn.btn-primary(type='submit') Rent

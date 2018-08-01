@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  .container
+    .card
+      h5.card-header Search
+      .card-body
+        form(method='POST' action='/')
+          .form-row
+            .form-group.col-md-4.offset-md-1
+              label(for='departure-city' required) Departure city
+              select(required)#departure-city.form-control
+                option(value='') Choose...
+                option New York City
+                option Los Angeles
+                option Chicago
+                option Houston
+                option Philadelphia
+            .form-group.col-md-4.offset-md-2
+              label(for='arrival-city') Arrival city
+              select( name='arrival-city' required)#arrival-city.form-control
+                option(value='') Choose...
+                option Istanbul
+                option London
+                option Ankara
+                option Berlin
+                option Madrid
+          
+          .form-row
+            .form-group.col-md-4.offset-md-1
+              label(for='departure-date') Departure date
+                .input-group.date(data-provide='datepicker')
+                  input#departure-date.form-control(type='text' required)
+                  .input-group-addon.input-group-append
+                    span#basic-addon2.input-group-text.fa.fa-calendar-check-o
+            .form-group.col-md-4.offset-md-2
+              label(for='arrival-date') Arrival date
+                .input-group.date(data-provide='datepicker')
+                  input#arrival-date.form-control(type='text' required)
+                  .input-group-addon.input-group-append
+                    span#basic-addon2.input-group-text.fa.fa-calendar-check-o
+
+          .form-row
+            .form-group.col-md-4.offset-md-1
+              label(for='tickets') Tickets
+              select(required)#tickets.form-control
+                option(value='') Choose...
+                option 1
+                option 2
+            .form-group.col-md-4.offset-md-2
+              .form-check.form-check-inline.mb-2
+                input#greturning.form-check-input(type='checkbox')
+                label.form-check-label(for='returning') Returning
+          
+          br
+          .form-row
+            .form-group.offset-md-1
+              button.btn.btn-primary(type='submit') Search
