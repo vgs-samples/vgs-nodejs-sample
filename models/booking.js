@@ -1,5 +1,6 @@
 module.exports = function(sequelize, Sequalize) {
   var BookingSchema = sequelize.define("Booking", {
+      homeaway_id: Sequalize.STRING,
       first_name: Sequalize.STRING,
       last_name: Sequalize.STRING,
       address: Sequalize.STRING,
