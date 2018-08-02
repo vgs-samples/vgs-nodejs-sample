@@ -20,20 +20,20 @@ var proxy = new HttpsProxyAgent(options);
 stripe.setHttpAgent(proxy);
 
 utils.charge_card = (number, exp_month, exp_year, cvc, callback) => {
-	stripe.tokens.create({
-		card: {
-			number: number,
-			exp_month: exp_month,
-			exp_year: exp_year,
-			cvc: cvc
-		}
-	}, (err, card) => {
-		stripe.charges.create({
-			amount: 100,
-			currency: 'USD',
-			source: card.id,
-		}, callback);
-	});
+    stripe.tokens.create({
+        card: {
+            number: number,
+            exp_month: exp_month,
+            exp_year: exp_year,
+            cvc: cvc
+        }
+    }, (err, card) => {
+        stripe.charges.create({
+            amount: 100,
+            currency: 'USD',
+            source: card.id
+        }, callback);
+    });
 }
 
 module.exports = utils;
