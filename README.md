@@ -49,7 +49,22 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ## Setup self-revealing
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.gif">
 
-1.
+1. Open payments list page at `https://<tenant>.sandbox.verygoodproxy.com/list`
+2. All fields should be replaced with tokens
+3. Click on `Reveal`, nothing should change because revealing rule isn't setup yet
+4. Open VGS dashboard, go to `Routes`
+5. Click `New Route` -> `New inbound route`
+6. Put ngrok url to upstream
+7. Set one filter condition: `Pathinfo matches /list/\\d+`
+8. Phase: `On response`
+9. Basic type: `REVEAL`
+10. Operation: `RegExp`
+11. Fields in Regexp: `tok_[a-z]*_[0-9a-zA-Z]{20,22}`
+12. Click Save.
+13. Go back to the payments page at `https://<tenant>.sandbox.verygoodproxy.com/list`
+14. Click on `Reveal`, now instead of tokens you should see real data there
+13. Done, you inbound self-revealing route has been created correctly and should look like this:
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.png">
 
 ## Secure outbound traffic to Stripe
 1. TODO
