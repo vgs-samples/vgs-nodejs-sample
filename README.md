@@ -47,7 +47,7 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
 
 ## Setup self-revealing
-TODO gif file
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.gif">
 
 1.
 
