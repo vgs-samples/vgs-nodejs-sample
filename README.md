@@ -18,6 +18,7 @@
 1. Go to [VGS-Dashboard](https://dashboard.verygoodsecurity.com), create a new organization, create a new vault.
 2. Select your vault, go to `Integration` page
 3. Copy your proxy URL, it should be in format:
+
 ```
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
