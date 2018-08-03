@@ -30,10 +30,11 @@ router.post('/confirm', function(req, res, next) {
         zip: req.body['zip'],
         cc_name: req.body['cc-name'],
         cc_number: req.body['cc-number'],
-        cc_exp: req.body['cc-exp'],
+        cc_month: req.body['cc-month'],
+        cc_year: req.body['cc-year'],
         cc_cvv: req.body['cc-cvv']
     }).then(booking => {
-        charge_card(booking.cc_number, '11', '22', booking.cc_cvv, () => {
+        charge_card(booking.cc_number, booking.cc_month, booking.cc_year, booking.cc_cvv, () => {
             res.render('confirm');
         });
     }).error(err => {

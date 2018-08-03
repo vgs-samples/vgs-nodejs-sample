@@ -10,6 +10,8 @@ module.exports = function(sequelize, Sequalize) {
       cc_name: Sequalize.STRING,
       cc_number: Sequalize.STRING,
       cc_exp: Sequalize.STRING,
+      cc_month: Sequalize.STRING,
+      cc_year: Sequalize.STRING,
       cc_cvv: Sequalize.STRING
   },{
       timestamps: false

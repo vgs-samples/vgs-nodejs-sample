@@ -17,7 +17,9 @@ block content
                 .col-6
                   .form-group
                     label.control-label.mb-1(for='cc-exp') Expiration
-                    input#cc-exp.form-control(type='text' value=booking.cc_exp disabled)
+                    .input-group
+                      input#cc-exp.form-control(type='text' value=booking.cc_month disabled)
+                      input.form-control(type='text' value=booking.cc_year disabled)
                 .col-6
                   label.control-label.mb-1(for='cc-cvv') Security code
                   input#cc-cvv.form-control(type='text' value=booking.cc_cvv disabled)

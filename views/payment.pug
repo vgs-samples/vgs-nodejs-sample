@@ -18,9 +18,10 @@ block content
               input#cc-number.form-control.cc-number.identified.visa(name='cc-number' type='tel' required pattern='[0-9]{16}')
             .row
               .col-6
-                .form-group
-                  label.control-label.mb-1(for='cc-exp') Expiration
-                  input#cc-exp.form-control.cc-exp(name='cc-exp' type='tel' required placeholder='MM / YY')
+                label.control-label.mb-1(for='cc-exp') Expiration
+                .input-group
+                  input#cc-exp.form-control(name='cc-month' type='tel' required placeholder='MM')
+                  input.form-control(name='cc-year' type='tel' required placeholder='YY')
               .col-6
                 label.control-label.mb-1(for='cc-cvv') Security code
                 input#cc-cvv.form-control.cc-cvc(name='cc-cvv' type='tel' required placeholder='CVV')
