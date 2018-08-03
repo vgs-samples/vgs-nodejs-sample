@@ -25,7 +25,7 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 * This apllication contains `cert.pem` for VGS Sandbox environment only
 
 ## Run application
-1. Clone repository and go to the app folder
+1. Clone repository and go to `app` folder
 2. Install all dependencies `npm install`
 3. Run the app `HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start`
 4. Run ngrok `ngrok http 3000`
@@ -35,15 +35,16 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.gif">
 
 1. Go to VGS dashboard
-2. Got to `Secure traffic` -> `Inbound`
+2. Go to `Secure traffic` -> `Inbound`
 3. Put ngrok url to upstream
 4. Apllication should be availiable by `https://<tenant>.sandbox.verygoodproxy.com/`
 6. Fill forms in app, submit payment data
 7. Open VGS dashboard, go to `Logs`
-8. Find the request with payment data, click on it
-9. Click on `Secure this payload`
-10. Select fields, click `Secure`
-11. Done, you inbound secure route has been created and should look like this:
+8. Ensure that logger is recording payloads
+9. Find the request with payment data, click on it
+10. Click on `Secure this payload`
+11. Select fields, click `Secure`
+12. Done, you inbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
 
 ## Setup self-revealing
@@ -67,7 +68,15 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.png">
 
 ## Secure outbound traffic to Stripe
-1. TODO
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/third_revealing.gif">
+
+1. Open VGS dashboard, go to `Logs`
+2. Ensure that logger is recording payloads
+3. Find the request to Stripe API `https://api.stripe.com/v1/tokens`, click on it
+4. Click on `Secure this payload`
+5. Select fields, click `Secure`
+6. Done, you outbound secure route has been created and should look like this:
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/third_revealing.png">
 
 ## What is VGS?
 
