@@ -22,6 +22,7 @@
 ```
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
+
 * Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
 * This apllication contains SSL certificate `cert.pem` for VGS Sandbox environment only
 
