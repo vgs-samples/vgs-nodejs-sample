@@ -21,14 +21,15 @@
 ```
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
-* TODO: note about `http://`
-* TODO: note about cert
+* Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
+* This repository contains `cert.pem` for Sandbox environment only
 
 ## Run application
-1. Clone repository and go to app folder
-2. Install all dependecies `npm install`
+1. Clone repository and go to the app folder
+2. Install all dependencies `npm install`
 3. Run the app `HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start`
-4. Run ngrok, copy provided address
+4. Run ngrok `ngrok http 3000`
+5. Copy provided address `https://<some_id>.ngrok.io`
 
 ## Secure inbound traffic with VGS
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.gif">
@@ -43,6 +44,8 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 9. Click on `Secure this payload`
 10. Select fields, click `Secure`
 11. Done, you inbound secure route has been created
+
+TDOD: final route screenshot
 
 ## Setup self-revealing
 1. TODO
