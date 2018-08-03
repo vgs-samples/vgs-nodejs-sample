@@ -82,7 +82,7 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 4. Go back to VGS dashboard, it should detect the outbound connection, click on `Secure data`
 5. Find the request to Stripe API `https://api.stripe.com/v1/tokens`, click on it
 6. Click on `Secure this payload`
-7. Select fields, click `Secure`
+7. Select fields, click `Secure`, now Stripe will be receiving revealed data
 8. Done, you outbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/third_revealing.png">
 
