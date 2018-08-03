@@ -14,6 +14,7 @@ var url = require('url');
 var fs = require('fs');
 var path = require('path');
 
+// Double check that HTTP_PROXY starts with http:// otherwise there will be ssl errors
 var options = url.parse(process.env.HTTP_PROXY);
 options.ca = [fs.readFileSync(path.resolve(__dirname, 'cert.pem'))];
 var proxy = new HttpsProxyAgent(options);

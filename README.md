@@ -22,7 +22,7 @@
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
 * Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
-* This repository contains `cert.pem` for Sandbox environment only
+* This apllication contains `cert.pem` for VGS Sandbox environment only
 
 ## Run application
 1. Clone repository and go to the app folder
@@ -47,7 +47,9 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
 
 ## Setup self-revealing
-1. TODO
+TODO gif file
+
+1.
 
 ## Secure outbound traffic to Stripe
 1. TODO
