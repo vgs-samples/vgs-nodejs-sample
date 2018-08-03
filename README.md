@@ -31,6 +31,9 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 4. Run ngrok `ngrok http 3000`
 5. Copy provided address `https://<some_id>.ngrok.io`
 
+## Application structure
+TODO
+
 ## Secure inbound traffic with VGS
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.gif">
 
