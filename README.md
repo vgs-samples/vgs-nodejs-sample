@@ -18,11 +18,9 @@
 1. Go to [VGS-Dashboard](https://dashboard.verygoodsecurity.com), create a new organization, create a new vault.
 2. Select your vault, go to `Integration` page
 3. Copy your proxy URL, it should be in format:
-
 ```
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
-
 * Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
 * This apllication contains SSL certificate `cert.pem` for VGS Sandbox environment only
 
@@ -30,7 +28,9 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 1. Clone repository and go to `app` folder
 2. Install all dependencies `npm install`
 3. Run the app 
-```HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start```
+```
+HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start
+```
 4. Run ngrok `ngrok http 3000`
 5. Copy provided address `https://<some_id>.ngrok.io`
 
