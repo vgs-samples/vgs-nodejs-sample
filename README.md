@@ -33,7 +33,9 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 5. Copy provided address `https://<some_id>.ngrok.io`
 
 ## Application structure
-TODO
+- `/` - search form, after selecting some hotel will redirect to the payment page
+- `/list` - list of payments for booked hotels
+- `/list/:id` - revealed payment data page
 
 ## Secure inbound traffic with VGS
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.gif">
