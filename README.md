@@ -22,12 +22,13 @@
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
 * Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
-* This apllication contains `cert.pem` for VGS Sandbox environment only
+* This apllication contains SSL certificate `cert.pem` for VGS Sandbox environment only
 
 ## Run application
 1. Clone repository and go to `app` folder
 2. Install all dependencies `npm install`
-3. Run the app `HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start`
+3. Run the app 
+```HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PROXY='<proxy_url>' npm start```
 4. Run ngrok `ngrok http 3000`
 5. Copy provided address `https://<some_id>.ngrok.io`
 
@@ -64,7 +65,7 @@ TODO
 9. Basic type: `REVEAL`
 10. Operation: `RegExp`
 11. Fields in Regexp: `tok_[a-z]*_[0-9a-zA-Z]{20,22}`
-12. Click Save.
+12. Click Save
 13. Go back to the payments page at `https://<tenant>.sandbox.verygoodproxy.com/list`
 14. Click on `Reveal`, now instead of tokens you should see real data there
 13. Done, you inbound self-revealing route has been created correctly and should look like this:
