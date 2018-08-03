@@ -31,7 +31,7 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 4. Run ngrok, copy provided address
 
 ## Secure inbound traffic with VGS
-<img src="images/redaction.gif">
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/grab/blob/master/redaction.gif">
 1. Go to VGS dashboard
 2. Got to `Secure traffic` -> `Inbound`
 3. Put ngrok url to upstream
