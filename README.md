@@ -43,9 +43,8 @@ http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 8. Find the request with payment data, click on it
 9. Click on `Secure this payload`
 10. Select fields, click `Secure`
-11. Done, you inbound secure route has been created
-
-TDOD: final route screenshot
+11. Done, you inbound secure route has been created and should look like this:
+<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
 
 ## Setup self-revealing
 1. TODO
