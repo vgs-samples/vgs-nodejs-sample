@@ -22,7 +22,7 @@
 http://<user>:<password>@<tenant>.SANDBOX.verygoodproxy.com:8080
 ```
 * Proxy URL should start with `http://`, otherwise `https-proxy-agent` lib won't work
-* This apllication contains SSL certificate `cert.pem` for VGS Sandbox environment only
+* This application contains SSL certificate `cert.pem` for VGS Sandbox environment only
 
 ## Run application
 1. Clone repository and go to `app` folder
@@ -45,7 +45,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 1. Go to VGS dashboard
 2. Go to `Secure traffic` -> `Inbound`
 3. Put ngrok url to upstream
-4. Apllication should be availiable by `https://<tenant>.sandbox.verygoodproxy.com/`
+4. Application should be available by `https://<tenant>.sandbox.verygoodproxy.com/`
 6. Fill forms in app, submit payment data
 7. Open VGS dashboard, go to `Logs`
 8. Ensure that logger is recording payloads
