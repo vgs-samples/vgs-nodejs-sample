@@ -66,7 +66,7 @@ to ensure using tokens instead of sensitive data.
 <img width="1315" alt="list_secure" src="https://user-images.githubusercontent.com/7068169/44402118-6e89d800-a559-11e8-812e-a1e9867678b8.png">
 
 ## Setup self-revealing
-<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.gif">
+![self_revealing3](https://user-images.githubusercontent.com/7068169/44404321-4f8e4480-a55f-11e8-860e-cb72d2b468cd.gif)
 
 1. Open payments list page at `https://<tenant>.sandbox.verygoodproxy.com/list`
 2. All fields should be replaced with tokens
