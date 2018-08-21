@@ -49,8 +49,8 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 2. Go to `Secure traffic` -> `Inbound`
 3. Put ngrok url to upstream
 4. Application should be available by `https://<tenant>.sandbox.verygoodproxy.com/`
-6. Fill forms in app, submit payment data
-   Take a look at list of payments `https://<tenant>.sandbox.verygoodproxy.com/list`. The data was saved as is.
+5. Fill forms in app, submit payment data
+6. Take a look at list of payments `https://<tenant>.sandbox.verygoodproxy.com/list`. The data was saved as is.
 <img width="1331" alt="list_insecure" src="https://user-images.githubusercontent.com/7068169/44402081-5a45db00-a559-11e8-9285-536f6cdc625d.png">    
 7. Next we are going to save and use tokens instead of the sensitive data. Open VGS dashboard, go to `Logs`
 8. Ensure that logger is recording payloads
