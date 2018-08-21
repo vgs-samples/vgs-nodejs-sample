@@ -67,6 +67,7 @@ to ensure using tokens instead of sensitive data.
 
 ## Setup self-revealing
 ![self_revealing3](https://user-images.githubusercontent.com/7068169/44404321-4f8e4480-a55f-11e8-860e-cb72d2b468cd.gif)
+![rxo03mkant](https://user-images.githubusercontent.com/7068169/44409081-58d0de80-a56a-11e8-919f-8f24667b1bea.gif)
 
 1. Open payments list page at `https://<tenant>.sandbox.verygoodproxy.com/list`
 2. All fields should be replaced with tokens
