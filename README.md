@@ -43,7 +43,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 - `/list/:id` - revealed payment data page
 
 ## Secure inbound traffic with VGS
-<img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.gif">
+![secure inbound](https://user-images.githubusercontent.com/7068169/44394902-08915680-a541-11e8-8cd3-4fadbb004c96.gif)
 
 1. Go to VGS dashboard
 2. Go to `Secure traffic` -> `Inbound`
@@ -59,7 +59,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 11. Select fields, click `Secure`
 12. Done, you inbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
-13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` to ensure using tokents isntead of sensitive data.
+13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` to ensure using tokens instead of sensitive data.
 <img > 
 
 ## Setup self-revealing
