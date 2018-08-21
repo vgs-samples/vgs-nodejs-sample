@@ -43,7 +43,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 - `/list/:id` - revealed payment data page
 
 ## Secure inbound traffic with VGS
-![secure inbound](https://user-images.githubusercontent.com/7068169/44394902-08915680-a541-11e8-8cd3-4fadbb004c96.gif)
+![secure_inbound7](https://user-images.githubusercontent.com/7068169/44396763-a3406400-a546-11e8-9c05-06d1a7643542.gif)
 
 1. Go to VGS dashboard
 2. Go to `Secure traffic` -> `Inbound`
