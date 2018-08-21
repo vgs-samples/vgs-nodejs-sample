@@ -2,6 +2,9 @@
 <p align="center"><b>vgs-nodejs-sample</b></p>
 <p align="center"><i>Integration of node.js app with VGS</i></p>
 
+# Instructions for using this App
+This demo app demonstrates the typical scenario for secure/revealing traffic from customer application to payments operator.
+
 ## Requirements
 - VGS [account](https://dashboard.verygoodsecurity.com/)
 - Stripe [account](https://dashboard.stripe.com/register)
@@ -10,9 +13,9 @@
 
 ## Third-party services
 1. Create account on Stripe
-2. Generate Stripe sandbox API key
+2. Generate Stripe sandbox API key (https://dashboard.stripe.com/account/apikeys)
 3. Create account on HomeAway
-4. Get your HomeAway client_id and secret
+4. Get your HomeAway client_id and secret (https://www.homeaway.com/platform/myClients)
 
 ## VGS base setup
 1. Go to [VGS-Dashboard](https://dashboard.verygoodsecurity.com), create a new organization, create a new vault.
@@ -47,13 +50,17 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 3. Put ngrok url to upstream
 4. Application should be available by `https://<tenant>.sandbox.verygoodproxy.com/`
 6. Fill forms in app, submit payment data
-7. Open VGS dashboard, go to `Logs`
+   Take a look at list of payments `https://<tenant>.sandbox.verygoodproxy.com/list`. The data was saved as is.
+<img >    
+7. Next we are going to save and use tokens instead of the sensitive data. Open VGS dashboard, go to `Logs`
 8. Ensure that logger is recording payloads
 9. Find the request with payment data, click on it
 10. Click on `Secure this payload`
 11. Select fields, click `Secure`
 12. Done, you inbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
+13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` to ensure using tokents isntead of sensitive data.
+<img > 
 
 ## Setup self-revealing
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/self_revealing.gif">
