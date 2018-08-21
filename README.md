@@ -59,7 +59,8 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 11. Select fields, click `Secure`
 12. Done, you inbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
-13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` to ensure using tokens instead of sensitive data.
+13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` 
+to ensure using tokens instead of sensitive data.
 <img width="1315" alt="list_secure" src="https://user-images.githubusercontent.com/7068169/44402118-6e89d800-a559-11e8-812e-a1e9867678b8.png">
 
 ## Setup self-revealing
