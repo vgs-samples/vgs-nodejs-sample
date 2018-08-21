@@ -52,6 +52,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 5. Fill forms in app, submit payment data
 6. Take a look at list of payments `https://<tenant>.sandbox.verygoodproxy.com/list`. The data was saved as is.
 <img width="1331" alt="list_insecure" src="https://user-images.githubusercontent.com/7068169/44402081-5a45db00-a559-11e8-9285-536f6cdc625d.png">    
+
 7. Next we are going to save and use tokens instead of the sensitive data. Open VGS dashboard, go to `Logs`
 8. Ensure that logger is recording payloads
 9. Find the request with payment data, click on it
@@ -59,6 +60,7 @@ HA_CLIENT='<client_id>' HA_SECRET='<secret_key>' STRIPE_TOKEN='<token>' HTTP_PRO
 11. Select fields, click `Secure`
 12. Done, you inbound secure route has been created and should look like this:
 <img src="https://github.com/verygoodsecurity/vgs-nodejs-sample/raw/master/images/redaction.png">
+
 13. Take a look at list of payments again `https://<tenant>.sandbox.verygoodproxy.com/list` 
 to ensure using tokens instead of sensitive data.
 <img width="1315" alt="list_secure" src="https://user-images.githubusercontent.com/7068169/44402118-6e89d800-a559-11e8-812e-a1e9867678b8.png">
