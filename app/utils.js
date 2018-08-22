@@ -29,12 +29,17 @@ utils.charge_card = (number, exp_month, exp_year, cvc, callback) => {
             cvc: cvc
         }
     }, (err, card) => {
-        stripe.charges.create({
+        if (err!=null){
+            console.log(err)
+            callback();
+        } else {
+            stripe.charges.create({
             amount: 100,
             currency: 'USD',
             source: card.id
-        }, callback);
-    });
+            }, callback);
+    }})
+
 }
 
 module.exports = utils;
