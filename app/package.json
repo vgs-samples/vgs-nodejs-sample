@@ -8,7 +8,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~4.1.1",
-    "express": "~4.16.4",
+    "express": "~4.17.3",
     "homeaway": "^0.2.7",
     "http-errors": "~1.7.2",
     "morgan": "~1.9.1",
