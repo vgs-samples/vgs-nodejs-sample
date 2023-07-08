@@ -14,7 +14,7 @@
     "morgan": "~1.9.1",
     "pug": "2.0.3",
     "sequelize": "~5.15.1",
-    "sqlite3": "~4.0.8",
+    "sqlite3": "~4.2.0",
     "stripe": "~6.36.0",
     "https-proxy-agent": "~2.2.1"
   }
